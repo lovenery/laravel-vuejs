@@ -16,4 +16,9 @@ Route::get('/', function () {
 });
 
 Route::get('manage-vue', 'VueItemController@manageVue');
-Route::resource('vueitems','VueItemController');
+
+//Route::resource('vueitems','VueItemController');
+Route::get('vueitems', 'VueItemController@index');
+Route::post('vueitems', 'VueItemController@store');
+Route::put('vueitems/{vueitems}', 'VueItemController@update');
+Route::delete('vueitems/{vueitems}', 'VueItemController@destroy');
